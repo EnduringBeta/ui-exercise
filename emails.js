@@ -1,6 +1,8 @@
 // Functionality for email client
 
 var origin = window.location.origin + "/";
+var pathname = window.location.pathname
+    .substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
 var xhr;
 
