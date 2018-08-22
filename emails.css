@@ -1,0 +1,379 @@
+/* Styling for email client */
+
+body {
+    height: 500px;
+    font-family: sans-serif;
+    background-color: #1F85C0;
+}
+
+#header {
+    background-color: #1F85C0;
+    color: white;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#header #header-title {
+    display: inline-block;
+    float: left;
+    padding: 5px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#search {
+}
+
+#search #search-bar {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+#search #search-button {
+    display: inline-block;
+}
+
+#content {
+    height: 90%;
+}
+
+@media only screen and (min-width: 620px) {
+    #header {
+        height: 10%;
+    }
+
+    #header #header-title {
+        display: inline-block;
+        width: 40%;
+    }
+
+    #search {
+        height: 100%;
+        width: 50%;
+        float: right;
+    }
+
+    #search #search-bar {
+        width: 85%;
+        height: 70%;
+    }
+
+    #search #search-button {
+        height: 90%;
+        width: 10%;
+    }
+
+    #sidebar {
+        width: 20%;
+        height: 100%;
+        float: left;
+        /*background-color: lightblue;*/
+        display: table;
+    }
+
+    #sidebar .sidebar-option {
+        padding-left: 10px;
+        padding-top: 15px;
+        transition: background-color .5s;
+        cursor: pointer;
+    }
+
+    #sidebar .sidebar-option:hover {
+        background-color: rgba(243,243,243,.85);
+        transition: background-color .5s;
+    }
+
+    #sidebar .action {
+        height: 50px;
+    }
+
+    #sidebar .action h2 {
+        margin: 0px;
+    }
+
+    #sidebar #sidebar-tags h3 {
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+
+    #email-container {
+        width: 80%;
+    }
+
+    .email {
+        height: 40px;
+    }
+
+    .email .email-info div {
+        display: inline-block;
+    }
+
+    .email .sender-text {
+        width: 20%;
+    }
+
+    .email .info-text {
+        width: 60%;
+    }
+
+    .email .date-text {
+        width: 15%;
+    }
+
+    #email-view {
+        width: 50%;
+    }
+
+    #email-compose {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #header {
+        height: 20%;
+    }
+
+    #header #header-title {
+        display: block;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #search {
+    }
+
+    #search #search-bar {
+        width: 200px;
+        height: 25px;
+    }
+
+    #search #search-button {
+        width: 50px;
+    }
+
+    #sidebar {
+        display: block;
+        width: 100%;
+    }
+
+    #sidebar .sidebar-option {
+        transition: background-color .5s;
+        cursor: pointer;
+    }
+
+    #sidebar .sidebar-option:hover {
+        background-color: rgba(243,243,243,.85);
+        transition: background-color .5s;
+    }
+
+    #sidebar .action {
+        height: 50px;
+    }
+
+    #sidebar .action h2 {
+        margin: 0px;
+        text-align: center;
+    }
+
+    #sidebar .sidebar-tag {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    #sidebar #sidebar-tags h3 {
+        margin: 0px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    #email-container {
+        width: 100%;
+    }
+
+    .email {
+        height: 100px;
+    }
+
+    .email .email-info div {
+        display: block;
+    }
+
+    .email .sender-text {
+        width: 100%;
+    }
+
+    .email .info-text {
+        width: 100%;
+    }
+
+    .email .date-text {
+        width: 100%;
+    }
+
+    #email-view {
+        width: 100%;
+    }
+
+    #email-compose {
+        width: 100%;
+    }
+}
+
+#count-text {
+    /* From: https://stackoverflow.com/questions/526035/how-can-i-position-my-div-at-the-bottom-of-its-container */
+    display: table-row;
+    vertical-align: bottom;
+    text-align: center;
+    height: 1px;
+    padding: 5px;
+    color: white;
+}
+
+#email-container {
+    height: 100%;
+    float: right;
+    overflow: auto;
+    /*background-color: lightgrey;*/
+}
+
+#email-container #email-buttons {
+    padding-left: 10px;
+}
+
+#email-list {
+}
+
+#email-view {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(243,243,243,.85);
+}
+
+#email-view .view-field {
+}
+
+#email-compose {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(243,243,243,.85);
+}
+
+#email-compose .compose-field {
+    padding: 10px;
+}
+
+#email-compose .compose-field .label {
+    display: inline-block;
+    width: 100px;
+}
+
+#email-compose .compose-field input {
+    display: inline-block;
+    width: 300px;
+}
+
+#email-compose .compose-field textarea {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: 5px;
+    background-color: #FAA529;
+    color: white;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: orangered;
+    transition: background-color .5s;
+}
+
+.email-button {
+    width: 80px;
+    height: 30px;
+}
+
+.email {
+    /*background-color: #1F85C0;*/
+    background-color: rgba(243,243,243,.85);
+    color: black;
+    margin: 5px;
+    transition: background-color .5s;
+}
+
+.email:hover {
+    background-color: rgba(243,243,243);
+    transition: background-color .5s;
+}
+
+.email .checkbox {
+    width: 5%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.email .checkbox input {
+    height: 100%;
+    margin: 0px;
+}
+
+.email .email-info {
+    display: inline-block;
+    height: 100%;
+    width: 95%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.email .email-info div {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+.email .sender-text {
+}
+
+.email .info-text {
+}
+
+.email .info-text .tag {
+    border-radius: 5px;
+    margin: 0 3px;
+    padding: 0 3px;
+    background-color: red;
+}
+
+.email .info-text .body-text {
+    color: grey;
+}
+
+.email .date-text {
+}
+
+/*.email .delete-button {
+    width: 5%;
+    height: 100%;
+}
+
+.email .delete-button:hover {
+}*/
+

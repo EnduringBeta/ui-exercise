@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="emails.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <title>My Email Client</title>
+
+    <script src="utils.js" type="text/javascript"></script>
+    <script src="emails.js" type="text/javascript"></script>
+
+    <script>
+       readEmails("emails.json");
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="header-title" onclick="goHome()">~Electronic Mail~</h1>
+        <div id="search">
+            <input type="text" id="search-bar">
+            <button id="search-button" class="button"
+                    onclick="searchText()">
+                <img src="search.png" alt="search email">
+            </button>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="sidebar">
+            <div class="sidebar-option action" onclick="composeEmail()">
+                <h2>Compose</h2>
+            </div>
+            <div class="sidebar-option action" onclick="deleteSelectedEmail()">
+                <h2>Delete Selected</h2>
+            </div>
+            <div id="sidebar-tags"></div>
+            <div id="count-text"></div>
+        </div>
+        <div id="email-container">
+            <!--<h2 id="email-buttons">Your Email</h2>-->
+            <div id="email-list">
+                <!-- JS populates this -->
+            </div>
+            <div id="email-view" hidden>
+                <!-- JS populates this with content -->
+                <div class="view-field">
+                    Subject: <span id="view-subject"></span>
+                </div>
+                <div class="view-field">
+                    From: <span id="view-from"></span>
+                </div>
+                <div class="view-field">
+                    To: <span id="view-to"></span>
+                </div>
+                <div class="view-field">
+                    Tags: <span id="view-tags"></span>
+                </div>
+                <div class="view-field">
+                    Message:
+                    <div id="view-body"></div>
+                </div>
+                <button class="button email-button" onclick="replyEmail()">
+                    Reply
+                </button>
+                <button class="button email-button" onclick="closeEmail()">
+                    Back
+                </button>
+            </div>
+            <div id="email-compose" hidden>
+                <!-- JS populates this with content -->
+                <div class="compose-field">
+                    <div class="label">To:</div>
+                    <input type="text" id="compose-to" name="to">
+                </div>
+                <div class="compose-field">
+                    <div class="label">From:</div>
+                    <input type="text" id="compose-from" name="from">
+                </div>
+                <div class="compose-field">
+                    <div class="label">Subject:</div>
+                    <input type="text" id="compose-subject" name="subject">
+                </div>
+                <div class="compose-field">
+                    <div class="label">Message:</div>
+                    <textarea id="compose-body" name="body"></textarea>
+                </div>
+                <button class="button email-button" onclick="sendEmail()">
+                    Send
+                </button>
+                <button class="button email-button" onclick="closeEmail()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
