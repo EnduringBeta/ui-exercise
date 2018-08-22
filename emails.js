@@ -1,6 +1,6 @@
 // Functionality for email client
 
-var origin = window.location.origin + "/";
+var origin = window.location.origin;
 var pathname = window.location.pathname
     .substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
@@ -28,7 +28,7 @@ function readEmails(filename) {
                 origEmailList.length, origEmailList.length);
         }
     };
-    xhr.open("GET", origin + filename);
+    xhr.open("GET", origin + pathname + filename);
     xhr.send();
 }
 
