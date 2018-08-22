@@ -8,4 +8,4 @@ npm install --global mocha
 
 Testing:
 
-"npm test" runs the two simple tests
+"npm test" runs the two simple tests after the last line of emails.js is uncommented
