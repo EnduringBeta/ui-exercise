@@ -1,7 +1,6 @@
 // Functionality for email client
 
-var protocol = "http://";
-var serverUrl = "localhost:8080/";
+var origin = window.location.origin + "/";
 
 var xhr;
 
@@ -27,7 +26,7 @@ function readEmails(filename) {
                 origEmailList.length, origEmailList.length);
         }
     };
-    xhr.open("GET", protocol + serverUrl + filename);
+    xhr.open("GET", origin + filename);
     xhr.send();
 }
 
